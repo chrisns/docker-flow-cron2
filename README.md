@@ -28,7 +28,7 @@ services:
       restart_policy: on-failure
 ```
 
-example installation: {
+example installation: 
 ```yaml
 version: "3"
 services:
