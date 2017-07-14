@@ -1,5 +1,12 @@
 # docker-flow-cron2
 
+![](https://img.shields.io/docker/automated/pinked/docker-flow-cron2.svg)
+![](https://img.shields.io/docker/stars/pinked/docker-flow-cron2.svg)
+![](https://img.shields.io/docker/pulls/pinked/docker-flow-cron2.svg)
+[![license](https://img.shields.io/github/license/pinked/docker-flow-cron2.svg)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/pinked/docker-flow-cron2.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/pinked/docker-flow-cron2.svg)]()
+
 Similar to cron.dockerflow.com except you define the thing you want to run as a service, and this job forces to 0 replicas and then back up to one replica
 
 Thus this won't work for long running uninteruptable services.
