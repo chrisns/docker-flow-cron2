@@ -3,6 +3,8 @@ const Promise = require('bluebird')
 const docker = new Docker({socketPath: '/var/run/docker.sock'})
 const cron = require('node-cron')
 const _ = require('lodash')
+const Health = require('healthful')
+const health = new Health({service: 'cron_runner', http: true, interval: 30 * 1000})
 
 const tasks = []
 
@@ -39,3 +41,5 @@ const setServiceReplicas = (s, replicas) =>
 
 updateCronTable()
 cron.schedule(process.env.DF_UPDATE_SCHEDULE, updateCronTable)
+
+cron.schedule("* * * * * * *", () => health.ping())
