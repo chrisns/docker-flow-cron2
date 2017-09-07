@@ -17,7 +17,9 @@ const scheduleService = (service) => {
 const updateCronTable = () => {
   console.log("Updating services")
   _.each(tasks, (task, i) => {
-    task.destroy()
+    if (task) {
+      task.destroy()
+    }
     tasks.splice(i, 1)
   })
   Promise.resolve(docker.service.list())
@@ -39,7 +41,6 @@ const setServiceReplicas = (s, replicas) =>
       return service.update(spec)
     })
 
-updateCronTable()
-cron.schedule(process.env.DF_UPDATE_SCHEDULE, updateCronTable)
+cron.schedule(process.env.DF_UPDATE_SCHEDULE, updateCronTable, true)
 
 cron.schedule("* * * * * * *", () => health.ping())
