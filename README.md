@@ -1,5 +1,7 @@
 # docker-flow-cron2
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pinked/docker-flow-cron2.svg)](https://greenkeeper.io/)
+
 ![](https://img.shields.io/docker/automated/pinked/docker-flow-cron2.svg)
 ![](https://img.shields.io/docker/stars/pinked/docker-flow-cron2.svg)
 ![](https://img.shields.io/docker/pulls/pinked/docker-flow-cron2.svg)
